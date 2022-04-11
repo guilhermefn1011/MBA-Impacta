@@ -1,0 +1,13 @@
+FROM mysql
+ENV MYSQL_ROOT_PASSWORD impacta
+
+
+#1 docker build -t mysql-image -f Aula1/services/db/DockerFile .
+#2 docker run -d --rm --name mysql-container mysql-image
+#3 docker exec -i mysql-container mysql -uroot -pimpacta < services/db/scripts.sql
+#4 docker exec -it mysql-container /bin/bash
+#5 mysql -uroot -pimpacta
+#6 show databases;
+#7 USE IMPACTA_DATABASE;
+#8 SELECT * FROM CLIENTE;
+# docker-compose
