@@ -1,0 +1,34 @@
+.letter {
+    border: solid 1px #000;
+    width: 400px;
+    margin: 40px auto;
+}
+
+.letter h1 {
+    border: solid 1px rgb(117, 25, 25);
+    text-align: center;
+    background-color: rgb(117, 25, 25);
+    width: 420px;
+    position: relative;
+    color: #FFFFFF;
+    left: -10px;
+    text-align: center;
+}
+
+.letter h1::before {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -10px;
+    border: solid 5px rgb(117, 25, 25);
+    border-color: transparent rgb(117, 25, 25) rgb(117, 25, 25) transparent;
+}   
+
+.letter p {
+    padding: 10px;
+}
+
+div.actions {
+    display: inline-block;
+    margin: 0px 10px 10px 10px;
+}
