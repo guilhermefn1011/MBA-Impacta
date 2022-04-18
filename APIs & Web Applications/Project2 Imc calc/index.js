@@ -1,29 +1,21 @@
-const btn = document.querySelector("#send");
+function calculaimc() {
+    let peso = parseFloat(document.getElementById('Fpeso').value);
+    let altura = parseFloat(document.getElementById('Faltura').value);
 
+    const imc = peso / (altura ^ 2);
+    let tipo = "";
 
-btn.addEventListener("click", function(e,showResult) {
-    e.preventDefault();
+        if (imc > 30) {
+            tipo = "Obesidade";
+            
+        }else if(imc > 24.9){
+            tipo = "Sobrepeso";
+        }
+        else if (imc > 18.5){
+            tipo = "Normal";
+        } else {
+            tipo = "Magreza";
+        }
 
-    const peso = document.querySelector("#peso");
-    const pesoValue = peso.value;
-
-    const altura = document.querySelector("#altura");
-    const alturaValue = altura.value;
-
-    console.log( alturaValue, pesoValue, imc);
-
-    var imc = (pesoValue/alturaValue);
-    return imc;
-    
-})
-
-function calcImc() {
-    var imc = pesoValue / Math.pow(alturaValue, 2);
-    return imc;
+    document.querySelector('#imc').innerHTML = tipo + " - " + imc.toFixed(2);
 }
-
-function showResult() {
-    document.querySelector('.container h3')
-    .innerHTML = calcImc();
-}
-

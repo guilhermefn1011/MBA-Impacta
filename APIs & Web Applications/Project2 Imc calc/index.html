@@ -4,17 +4,23 @@
     </head>
     <body>
         <div class="container">
-            <div class="inputInfo">
-                <form action="">
-                <Input type="number" id="peso" name="peso" placeholder="Digite seu Peso"></Input>
-                <br>
-                <Input type="number" id="altura" name="altura" placeholder="Digite sua Altura"></Input>
-                <br>
-                <input type="submit" id="send" value="enviar">
-                </form>
-                <hr>
+            <div class="forms">
+                    <form>
+                        <h1>Calcular IMC</h1>
+                        <hr>
+                        <div class="form-floating">
+                            <label for="Fpeso">Peso</label>
+                            <input type="number" class="form-control" id="Fpeso" placeholder="Digite seu peso" required>
+                            <p></p>
+                            <label for="Faltura">Altura</label>
+                            <input type="number" class="form-control" id="Faltura" placeholder="Digite sua altura" required>
+                        </div>
+                        <p></p>
+                        <button type='submit' onclick="calculaimc()">Calcular</button>
+                        <p id="imc" class="mt-5 mb-3 text-muted"></p>
+                        
+                    </form>
             </div>
-            <p>Resultado:<h3></h3></p>
         </div>
     </body>
     <script lang="text/javascript" src="./index.js"></script>
